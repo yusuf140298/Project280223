@@ -30,6 +30,7 @@ class Payments extends Component
             "payments.information as information_pay",
             "payments.payment",
             "payments.image",
+            "payments.status as status_payment",
             "payments.created_at",
             "reimbursements.user",
             "users.name"

@@ -30,12 +30,12 @@
                             <td class="border px-4 py-2">{{ $row->information }}</td>
                             <td class="border px-4 py-2">Rp. {{ $row->cost }}</td>
                             <td class="border px-4 py-2" align="center"><img src="{{ url('storage/'.$row->image) }}" class="img-thumbnail" style="width:80px; height:80px"/></td>
-                            <td class="border px-4 py-2">@if($row->status == 1) <span class="text-green-500">Accepted</span>@elseif($row->status == 2) <span class="text-red-500">Reject</span>@else <span class="text-yellow-500">Waiting</span> @endif</td>
+                            <td class="border px-4 py-2">@if($row->status == 1) <span class="text-green-500">Accepted</span>@elseif($row->status == 2) <span class="text-red-500">Reject</span>@elseif($row->status == 3) <span class="text-blue-500">Claimed</span>@else <span class="text-yellow-500">Waiting</span> @endif</td>
                             <td class="border px-4 py-2 text-center">
                                 @if($row->status == 0)
-                                <button wire:click="confirm({{ $row->id }})" class="bg-purple-500 hover:bg-purple-700 text-white py-2 px-3">Confirmation</button>
+                                <button wire:click="confirm({{ $row->id_reimburs }})" class="bg-purple-500 hover:bg-purple-700 text-white py-2 px-3">Confirmation</button>
                                 @else
-                                <span class="text-purple-500">Confired</span>
+                                <span class="text-purple-500">Confirmed</span>
                                 @endif
                                 <!-- <button wire:click="delete({{ $row->id }})" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Hapus</button> -->
                             </td>

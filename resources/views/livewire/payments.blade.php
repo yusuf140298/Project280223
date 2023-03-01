@@ -80,9 +80,9 @@
                             <td class="border px-4 py-2">{{ $row->information_pay }}</td>
                             <td class="border px-4 py-2">Rp. {{ $row->payment }}</td>
                             <td class="border px-4 py-2" align="center"><img src="{{ url('storage/'.$row->image) }}" class="img-thumbnail" style="width:80px; height:80px"/></td>
-                            <td class="border px-4 py-2">@if($row->status == 1) <span class="text-blue-500">Claim</span> @else <span class="text-yellow-500">Waiting</span> @endif</td>
+                            <td class="border px-4 py-2">@if($row->status_payment == 1) <span class="text-blue-500">Claim</span> @else <span class="text-yellow-500">Waiting</span> @endif</td>
                             <td class="border px-4 py-2 text-center">
-                                <button wire:click="edit({{ $row->id }})" class="bg-purple-500 hover:bg-purple-700 text-white py-2 px-3">Detail</button>
+                                <button wire:click="edit({{ $row->id_payment }})" class="bg-purple-500 hover:bg-purple-700 text-white py-2 px-3">Detail</button>
                             </td>
                         </tr>
                     @empty
