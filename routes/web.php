@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Reimbursements;
+use App\Http\Livewire\Users;
+use App\Http\Livewire\Payments;
+use App\Http\Livewire\CreateReimbursement;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,3 +32,19 @@ Route::middleware([
 });
 
 Route::get('reimbursements', Reimbursements::class)->name('reimbursement');
+
+Route::get('users', Users::class)->name('user');
+
+Route::get('payments', Payments::class)->name('payment');
+
+Route::get('createreimbursement', CreateReimbursement::class)->name('create-r');
+
+
+
+
+
+
+
+
+
+

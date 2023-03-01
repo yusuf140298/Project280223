@@ -24,15 +24,17 @@
                 <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
             </div>
 
-            <div class="mt-4">
+            <!-- <div class="mt-4">
                 <x-label for="level" value="{{ __('Level') }}" />
-                <!-- <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" /> -->
+                <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
                 <select id="level" class="block mt-1 w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm" name="level" :value="old('level')" require>
                     <option value="1">-- Select --</option>
                     <option value="1">Business Owner</option>
                     <option value="2">Employee</option>
                 </select>
-            </div>
+            </div> -->
+            <input type="hidden" id="level" class="block mt-1 w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm" name="level" :value="old('level')" value="2">
+
 
             <div class="mt-4">
                 <x-label for="password_confirmation" value="{{ __('Confirm Password') }}" />

@@ -5,14 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Reimbursement extends Model
+class Payment extends Model
 {
     use HasFactory;
 
+
     protected $fillable = [
-        'user',
-        'cost',
+        'send_to_user',
+        'send_from_user',
         'information',
+        'payment',
         'image',
         'status',
     ];

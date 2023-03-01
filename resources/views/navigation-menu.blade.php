@@ -18,7 +18,22 @@
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link href="{{ route('reimbursement') }}" :active="request()->routeIs('reimbursement')">
-                        {{ __('Data Reimbursement') }}
+                        {{ __('Reimbursement Data') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link href="{{ route('user') }}" :active="request()->routeIs('user')">
+                        {{ __('User Data') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link href="{{ route('payment') }}" :active="request()->routeIs('payment')">
+                        {{ __('Payment') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link href="{{ route('create-r') }}" :active="request()->routeIs('create-r')">
+                        {{ __('Submission of Funds') }}
                     </x-nav-link>
                 </div>
             </div>

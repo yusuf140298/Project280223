@@ -13,12 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('reimbursements', function (Blueprint $table) {
+        Schema::create('payments', function (Blueprint $table) {
             $table->id();
-            $table->integer('user')->index();
-            $table->decimal('cost',15 , 2)->nullable();
+            $table->string('send_to_user')->index();
+            $table->string('send_from_user')->index();
             $table->string('information')->nullable();
+            $table->decimal('payment',15,2)->nullable();
             $table->string('image')->nullable();
+            $table->int('status')->nullable();
             $table->timestamps();
         });
     }
@@ -30,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('reimbursements');
+        Schema::dropIfExists('payments');
     }
 };

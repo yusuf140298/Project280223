@@ -13,13 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('reimbursements', function (Blueprint $table) {
-            $table->id();
-            $table->integer('user')->index();
-            $table->decimal('cost',15 , 2)->nullable();
-            $table->string('information')->nullable();
-            $table->string('image')->nullable();
-            $table->timestamps();
+        Schema::table('reimbursements', function (Blueprint $table) {
+            //
+            $table->int('status')->nullable();
         });
     }
 
@@ -30,6 +26,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('reimbursements');
+        Schema::table('reimbursements', function (Blueprint $table) {
+            //
+        });
     }
 };

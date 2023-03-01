@@ -10,7 +10,8 @@ class Reimbursements extends Component
 {
     public function render()
     {
-        $this->reimbursement = Reimbursement::orderBy('created_at', 'DESC')->get();
+        $this->reimbursement = Reimbursement::orderBy('status', 'ASC')->get();
         return view('livewire.reimbursements');
     }
+
 }
