@@ -16,6 +16,7 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                 </div>
+                @if(Auth::user()->level == 1)
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link href="{{ route('reimbursement') }}" :active="request()->routeIs('reimbursement')">
                         {{ __('Reimbursement Data') }}
@@ -31,11 +32,18 @@
                         {{ __('Payment') }}
                     </x-nav-link>
                 </div>
+                @else
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link href="{{ route('create-r') }}" :active="request()->routeIs('create-r')">
                         {{ __('Submission of Funds') }}
                     </x-nav-link>
                 </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link href="{{ route('h-reimburs') }}" :active="request()->routeIs('h-reimburs')">
+                        {{ __('History') }}
+                    </x-nav-link>
+                </div>
+                @endif
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ml-6">

@@ -15,12 +15,12 @@ return new class extends Migration
     {
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
-            $table->string('send_to_user')->index();
-            $table->string('send_from_user')->index();
+            $table->integer('id_reimbursement')->index();
+            $table->integer('send_from_user');
             $table->string('information')->nullable();
             $table->decimal('payment',15,2)->nullable();
             $table->string('image')->nullable();
-            $table->int('status')->nullable();
+            $table->integer('status')->nullable();
             $table->timestamps();
         });
     }

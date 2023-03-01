@@ -14,15 +14,15 @@
                                 <p class="text-sm">{{ session('message') }}</p>
                             </div>
                         </div>
-                    </div>
+                    </div> 
                 @endif
             <form wire:submit.prevent="submit" method="post" class="w-100 px-6 py-3" enctype="multipart/form-data">
                 <div class="mt-0">
                     <x-label for="send" value="{{ __('Send To') }}"/>
                     <select name="send" id="send" class="block mt-1 w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm" wire:model="send">
                         <option value="">-- Select --</option>
-                        @forelse($user as $row)
-                        <option value="{{$row->id}}">{{$row->name}}</option>
+                        @forelse($reimbursements as $row)
+                        <option value="{{$row->id_reimburs}}">{{$row->user}} - 001{{$row->id_reimburs}}</option>
                         @empty
                         @endforelse
                     </select>
@@ -64,7 +64,7 @@
                 <thead>
                     <tr class="bg-gray-100">
                         <th class="px-4 py-2 w-20">ID.</th>
-                        <th class="px-4 py-2">Send To</th>
+                        <th class="px-4 py-2">Send To Reimburs</th>
                         <th class="px-4 py-2">Information</th>
                         <th class="px-4 py-2">Payment</th>
                         <th class="px-4 py-2">Image</th>
@@ -75,9 +75,9 @@
                 <tbody>
                     @forelse($payments as $row)
                         <tr>
-                            <td class="border px-4 py-2">{{ $row->id }}</td>
-                            <td class="border px-4 py-2">{{ $row->send_to_user }}</td>
-                            <td class="border px-4 py-2">{{ $row->information }}</td>
+                            <td class="border px-4 py-2">012{{ $row->id_payment }}</td>
+                            <td class="border px-4 py-2">{{ $row->name }}</td>
+                            <td class="border px-4 py-2">{{ $row->information_pay }}</td>
                             <td class="border px-4 py-2">Rp. {{ $row->payment }}</td>
                             <td class="border px-4 py-2" align="center"><img src="{{ url('storage/'.$row->image) }}" class="img-thumbnail" style="width:80px; height:80px"/></td>
                             <td class="border px-4 py-2">@if($row->status == 1) <span class="text-blue-500">Claim</span> @else <span class="text-yellow-500">Waiting</span> @endif</td>

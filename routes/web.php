@@ -5,6 +5,7 @@ use App\Http\Livewire\Reimbursements;
 use App\Http\Livewire\Users;
 use App\Http\Livewire\Payments;
 use App\Http\Livewire\CreateReimbursement;
+use App\Http\Livewire\HistoryReimburs;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,6 +39,8 @@ Route::get('users', Users::class)->name('user');
 Route::get('payments', Payments::class)->name('payment');
 
 Route::get('createreimbursement', CreateReimbursement::class)->name('create-r');
+
+Route::get('historyreimburs', HistoryReimburs::class)->name('h-reimburs');
 
 
 

@@ -4,7 +4,7 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\User;
-class Users extends Component
+class Users extends Component 
 {
     public $users, $name, $email,  $level, $user_id;
     public $isModal = 0;
@@ -75,8 +75,7 @@ class Users extends Component
     //FUNGSI INI UNTUK MENGAMBIL DATA DARI DATABASE BERDASARKAN ID User 
     public function edit($id)
     {
-        $user = User::find($id); //BUAT QUERY UTK PENGAMBILAN DATA
-        //LALU ASSIGN KE DALAM MASING-MASING PROPERTI DATANYA
+        $user = User::find($id);
         $this->user_id = $id;
         $this->name = $user->name;
         $this->email = $user->email;

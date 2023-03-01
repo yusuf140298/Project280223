@@ -11,7 +11,7 @@ class Payment extends Model
 
 
     protected $fillable = [
-        'send_to_user',
+        'id_reimbursement',
         'send_from_user',
         'information',
         'payment',

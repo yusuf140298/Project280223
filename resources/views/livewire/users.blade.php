@@ -31,7 +31,7 @@
                         <th class="px-4 py-2">Email</th>
                         <th class="px-4 py-2">Level</th>
                         <th class="px-4 py-2">Action</th>
-                    </tr>
+                    </tr> 
                 </thead>
                 <tbody>
                     @forelse($user as $row)
