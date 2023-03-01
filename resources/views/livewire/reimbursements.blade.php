@@ -25,7 +25,7 @@
                             <td class="border px-4 py-2">{{ $row->user }}</td>
                             <td class="border px-4 py-2">{{ $row->information }}</td>
                             <td class="border px-4 py-2">Rp. {{ $row->cost }}</td>
-                            <td class="border px-4 py-2">{{ $row->image }}</td>
+                            <td class="border px-4 py-2" align="center"><img src="{{ url('storage/'.$row->image) }}" class="img-thumbnail" style="width:80px; height:80px"/></td>
                             <td class="border px-4 py-2">@if($row->status == 1) <span class="text-green-500">Success</span>@elseif($row->status == 2) <span class="text-red-500">Failed</span>@else <span class="text-yellow-500">Waiting</span> @endif</td>
                             <td class="border px-4 py-2 text-center">
                                 <button wire:click="edit({{ $row->id }})" class="bg-purple-500 hover:bg-purple-700 text-white py-2 px-3">Confirmation</button>
