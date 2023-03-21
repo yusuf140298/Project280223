@@ -71,6 +71,6 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 [UML Sistem Reimbursement.pdf](https://github.com/yusuf140298/Project280223/files/11028830/UML.Sistem.Reimbursement.pdf)
 
--> The system is built with the Laravel 9 framework
--> integrated with tailwind css and livewire
+- The system is built with the Laravel 9 framework
+- integrated with tailwind css and livewire
 
